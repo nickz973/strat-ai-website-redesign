@@ -586,6 +586,10 @@ h3 {
   color: var(--accent);
 }
 
+.hero-meta-highlight {
+  color: var(--text-soft);
+}
+
 .hero-meta span:not(:last-child)::after {
   content: "/";
   margin-left: 18px;
@@ -2018,7 +2022,7 @@ h3 {
 
   .mobile-nav {
     display: grid;
-    gap: 12px;
+    gap: 8px;
     max-height: 0;
     overflow: hidden;
     padding: 0 20px;
@@ -2028,12 +2032,15 @@ h3 {
   }
 
   .mobile-nav.is-open {
-    max-height: 320px;
+    max-height: 460px;
     padding: 0 20px 18px;
     border-top-color: rgba(119, 145, 186, 0.12);
   }
 
   .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     color: var(--text-soft);
     font-weight: 600;
   }
@@ -2128,6 +2135,63 @@ h3 {
 
   .contact-card {
     padding: 22px 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-title {
+    font-size: clamp(2.8rem, 12vw, 3.6rem);
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .hero-copy-glow::before {
+    left: -180px;
+    width: 680px;
+    height: 420px;
+  }
+
+  .pipeline-card {
+    padding: 22px 18px 18px;
+  }
+
+  .pipeline-card-header,
+  .pipeline-metrics {
+    gap: 12px;
+  }
+
+  .pipeline-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .integration-pills {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .integration-pills span {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .video-panel,
+  .about-video-panel {
+    border-radius: 24px;
   }
 }
 
