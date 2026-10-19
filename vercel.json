@@ -2,7 +2,23 @@
   "redirects": [
     {
       "source": "/about",
-      "destination": "/about-us.html"
+      "destination": "/#team",
+      "permanent": false
+    },
+    {
+      "source": "/about-us.html",
+      "destination": "/#team",
+      "permanent": false
+    },
+    {
+      "source": "/faq",
+      "destination": "/#faq",
+      "permanent": false
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/#faq",
+      "permanent": false
     }
   ]
 }
