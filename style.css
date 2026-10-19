@@ -2653,6 +2653,10 @@ h3 {
   color: var(--text-muted);
 }
 
+.team-headshot[src="aayush_headshot.webp"] {
+  object-position: center top;
+}
+
 .team-headshot-closeup {
   position: relative;
   overflow: hidden;
