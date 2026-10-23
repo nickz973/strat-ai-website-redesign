@@ -1865,6 +1865,33 @@ h3 {
   margin-top: 10px;
 }
 
+.contact-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.contact-form .contact-honeypot {
+  display: none;
+}
+
+.contact-status {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.contact-status:empty {
+  display: none;
+}
+
+.contact-status[data-state="success"] {
+  color: var(--accent-text);
+}
+
+.contact-status[data-state="error"] {
+  color: #fda4af;
+}
+
 .contact-form-note {
   margin-top: 16px;
   color: var(--text-muted);
@@ -2523,15 +2550,14 @@ h3 {
   }
 }
 
-.beta-form-placeholder {
+.beta-application-action {
   margin-top: 28px;
-  padding: 24px;
-  border: 1px dashed var(--line);
-  border-radius: var(--radius-md);
 }
 
-.beta-form-placeholder strong {
-  color: var(--accent-text);
+#beta-application .beta-application-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 .contact-form-panel > .button {

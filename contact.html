@@ -35,7 +35,7 @@
             <a href="index.html#team">Team</a>
             <a href="index.html#faq">FAQ</a>
             <a class="is-current" href="contact.html">Contact</a>
-            <a class="nav-cta calendly-trigger" href="https://calendly.com/yaseen-strataisolutions/intro">Book an intro call</a>
+            <a class="nav-cta calendly-trigger" href="https://calendly.com/yaseen-strataisolutions/15-min-intro">Book an intro call</a>
           </nav>
 
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
@@ -49,7 +49,7 @@
           <a href="index.html#team">Team</a>
           <a href="index.html#faq">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a class="nav-cta mobile-nav-cta calendly-trigger" href="https://calendly.com/yaseen-strataisolutions/intro">Book an intro call</a>
+          <a class="nav-cta mobile-nav-cta calendly-trigger" href="https://calendly.com/yaseen-strataisolutions/15-min-intro">Book an intro call</a>
         </div>
       </header>
 
@@ -89,30 +89,33 @@
               <h2>Let’s find your next step</h2>
               <p>Book an intro call, or send a few details by email and our founder will reply.</p>
 
-              <a class="button button-primary button-accent-ghost calendly-trigger" href="https://calendly.com/yaseen-strataisolutions/intro">Book a 15–20 min intro call</a>
+              <a class="button button-primary button-accent-ghost calendly-trigger" href="https://calendly.com/yaseen-strataisolutions/15-min-intro">Book a 15–20 min intro call</a>
 
-              <form class="contact-form" action="mailto:yaseen@strataisolutions.com" method="post" enctype="text/plain">
+              <form class="contact-form" action="https://formspree.io/f/xeaajbgw" method="post" aria-describedby="contact-status">
                 <label>
                   <span>Name</span>
-                  <input type="text" name="name" placeholder="Your name" />
+                  <input type="text" name="name" placeholder="Your name" autocomplete="name" required maxlength="200" />
                 </label>
 
                 <label>
                   <span>Work email</span>
-                  <input type="email" name="email" placeholder="you@firm.com" />
+                  <input type="email" name="email" placeholder="you@firm.com" autocomplete="email" required maxlength="254" />
                 </label>
 
                 <label>
-                  <span>Company</span>
-                  <input type="text" name="company" placeholder="Your firm" />
+                  <span>Company (optional)</span>
+                  <input type="text" name="company" placeholder="Your firm" autocomplete="organization" maxlength="200" />
                 </label>
 
                 <label>
                   <span>Biggest bottleneck</span>
-                  <textarea name="bottleneck" rows="4" placeholder="What slows your deals down the most right now?"></textarea>
+                  <textarea name="message" rows="4" placeholder="What slows your deals down the most right now?" required maxlength="5000"></textarea>
                 </label>
 
+                <input class="contact-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="hidden" name="_subject" value="New Strat AI website inquiry" />
                 <button class="button button-primary button-accent-ghost contact-submit" type="submit">Send inquiry</button>
+                <p class="contact-status" id="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
               </form>
 
               <p class="contact-form-note">
@@ -192,7 +195,7 @@
       async
     ></script>
     <script>
-      const calendlyUrl = "https://calendly.com/yaseen-strataisolutions/intro";
+      const calendlyUrl = "https://calendly.com/yaseen-strataisolutions/15-min-intro";
       document.querySelectorAll(".calendly-trigger").forEach((link) => {
         link.addEventListener("click", (event) => {
           event.preventDefault();
@@ -229,5 +232,6 @@
 
       document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
     </script>
+    <script src="contact.js" defer></script>
   </body>
 </html>
